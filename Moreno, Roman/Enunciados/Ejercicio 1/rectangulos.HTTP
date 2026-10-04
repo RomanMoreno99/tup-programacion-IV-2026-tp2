@@ -1,7 +1,7 @@
 ### Rectángulos API
 
 ### Crear rectángulo
-POST http://localhost:3001/api/rectangulos
+POST http://localhost:3000/api/rectangulos
 Content-Type: application/json
 
 {
@@ -10,13 +10,13 @@ Content-Type: application/json
 }
 
 ### Listar rectángulos
-GET http://localhost:3001/api/rectangulos
+GET http://localhost:3000/api/rectangulos
 
 ### Obtener rectángulo por ID
-GET http://localhost:3001/api/rectangulos/1
+GET http://localhost:3000/api/rectangulos/1
 
 ### Actualizar rectángulo
-PUT http://localhost:3001/api/rectangulos/1
+PUT http://localhost:3000/api/rectangulos/1
 Content-Type: application/json
 
 {
@@ -25,4 +25,4 @@ Content-Type: application/json
 }
 
 ### Eliminar rectángulo
-DELETE http://localhost:3001/api/rectangulos/1
+DELETE http://localhost:3000/api/rectangulos/1
