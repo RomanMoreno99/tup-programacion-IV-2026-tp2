@@ -1,18 +1,15 @@
 # Ejercicio 1
 
-Desarrollar una API con ExpressJS para administrar rectángulos, persistiendo la
-información en una base de datos MySQL.
+# API REST - Gestión de Rectángulos
 
-Para cada rectángulo se deben almacenar sus dos lados, su perímetro y su
-superficie. Al crear o modificar un rectángulo, la API debe recibir únicamente
-los valores de sus lados. El perímetro y la superficie deben calcularse en el
-servidor antes de persistir los datos; no deben aceptarse como valores enviados
-por el cliente.
+API backend desarrollada con **Node.js**, **Express.js** y **MySQL** para administrar rectángulos. La aplicación procesa los lados ingresados, calcula de manera automática el perímetro y la superficie en el servidor antes de persistirlos, e incorpora validaciones rigurosas mediante `express-validator`.
 
-La API debe validar, como mínimo, que ambos lados estén presentes y sean valores
-numéricos mayores que cero. También debe validar los parámetros, consultas y
-cuerpo de las solicitudes que implemente, utilizando `express-validator`.
+## Tecnologías Utilizadas
 
-Definir los recursos, los métodos HTTP y las respuestas que considere
-necesarios para gestionar los rectángulos. Fundamentar las decisiones de diseño
-adoptadas para el modelo de datos y para la API.
+* **Node.js** - Entorno de ejecución para JavaScript.
+* **Express.js** - Framework web para Node.js.
+* **MySQL (mysql2)** - Base de datos relacional y cliente de conexión.
+* **Express-Validator** - Librería para la validación de parámetros, consultas y cuerpos de solicitudes.
+* **Dotenv** - Manejo de variables de entorno.
+* **Nodemon** - Herramienta de desarrollo para reinicio automático.
+

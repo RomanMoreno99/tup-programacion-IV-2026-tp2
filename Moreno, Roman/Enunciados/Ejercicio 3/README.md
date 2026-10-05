@@ -1,21 +1,33 @@
 # Ejercicio 3
 
-Desarrollar una API con ExpressJS para gestionar las calificaciones de alumnos
-en las materias de una carrera, persistiendo la información en una base de datos
-MySQL.
+# API REST - Gestión de Calificaciones y Materias
 
-Para cada registro se debe almacenar el nombre del alumno, la materia cursada y
-tres notas. Las materias deben modelarse en una tabla independiente y
-relacionarse con los registros de alumnos mediante una clave foránea.
+API backend desarrollada con **Node.js**, **Express.js** y **MySQL** para la gestión de alumnos, materias y calificaciones universitarias. Cumple con reglas de validación estricta, restricciones de unicidad e integridad referencial.
 
-La API debe impedir que exista más de un registro para la misma combinación de
-alumno y materia, tanto al crear como al modificar información. Debe validar,
-como mínimo, que el nombre del alumno esté presente y sea válido; que la materia
-exista; que se informen exactamente tres notas numéricas dentro de la escala
-definida y documentada por el estudiante; y que se cumpla la regla de unicidad.
-Validar además los parámetros, consultas y cuerpo de las solicitudes que
-implemente utilizando `express-validator`.
+### Tecnologías Utilizadas
 
-Definir los recursos, los métodos HTTP y las respuestas que considere
-necesarios para gestionar alumnos, materias y calificaciones. Fundamentar las
-decisiones de diseño adoptadas para el modelo de datos y para la API.
+* **Node.js** - Entorno de ejecución para JavaScript.
+* **Express.js** - Framework web para Node.js.
+* **MySQL (mysql2)** - Base de datos relacional y cliente de conexión.
+* **Express-Validator** - Librería para la validación de parámetros, consultas y cuerpos de solicitudes.
+* **Dotenv** - Manejo de variables de entorno.
+* **Nodemon** - Herramienta de desarrollo para reinicio automático.
+
+---
+
+### Estructura del Proyecto
+
+```text
+/
+├── src/
+│   ├── config/
+│   │   └── db.js               # Configuración de la conexión al pool de MySQL
+│   ├── middlewares/
+│   │   └── validarCampos.js    # Middleware para interceptar errores de express-validator
+│   ├── routes/
+│   │   ├── materias.routes.js  # Endpoints para la gestión de materias
+│   │   └── calificaciones.routes.js # Endpoints para la gestión de calificaciones y notas
+│   └── index.js                # Archivo principal de inicialización de Express
+├── .env                        # Variables de entorno
+├── calificaciones.http         # Archivo de pruebas con extension REST Client
+└── package.json
